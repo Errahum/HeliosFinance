@@ -1,0 +1,25 @@
+{
+    "symbols": [
+        "SPY", "CF=F", "CL=F", "NG=F", "HO=F", "RB=F", "GC=F", "SI=F", "PL=F", "PA=F", "HG=F",
+        "ZC=F", "ZW=F", "ZS=F", "ZM=F", "KC=F", "CT=F", "OJ=F", "SB=F", "CC=F", "LR=F",
+        "SB=F", "MCD=F", "WHEAT=F", "CORN=F", "SOYBEAN=F", "OIL=F", "GOLD=F", "SILVER=F",
+        "PLATINUM=F", "PALLADIUM=F", "COPPER=F", "SUGAR=F", "COFFEE=F", "COTTON=F", "ORANGEJUICE=F",
+        "LUMBER=F", "PALLADIUM=F", "RICE=F", "PALM=F", "SOY=F", "WHEAT=F", "CANOLA=F",
+        "SUGAR=F", "CORN=F", "OIL=F", "GOLD=F", "SILVER=F", "PLATINUM=F", "PALLADIUM=F",
+        "COPPER=F", "RUBBER=F", "WHEAT=F", "COTTON=F", "COFFEE=F", "COCOA=F", "ORANGEJUICE=F",
+        "SUGAR=F", "SOYBEAN=F", "CORN=F", "WHEAT=F", "SOY=F", "OIL=F", "GOLD=F"
+    ],
+    "other_key": [
+        "SILVER=F", "PLATINUM=F", "PALLADIUM=F", "COPPER=F", "COFFEE=F", "COTTON=F",
+        "ORANGEJUICE=F", "CORN=F", "SOYBEAN=F", "WHEAT=F", "SUGAR=F", "RICE=F", "LUMBER=F",
+        "COTTON=F", "SOYBEAN=F", "COCOA=F", "SUGAR=F", "COFFEE=F", "RICE=F", "WHEAT=F",
+        "SILVER=F", "GOLD=F", "PLATINUM=F", "PALLADIUM=F", "COPPER=F", "OIL=F", "CORN=F",
+        "SOYBEAN=F", "COTTON=F", "ORANGEJUICE=F", "RICE=F", "LUMBER=F", "SUGAR=F", "WHEAT=F",
+        "GOLD=F", "SILVER=F", "PLATINUM=F", "PALLADIUM=F", "COPPER=F", "OIL=F", "RICE=F",
+        "CORN=F", "SOYBEAN=F", "WHEAT=F", "COFFEE=F", "COTTON=F", "COCOA=F", "SUGAR=F",
+        "GOLD=F", "SILVER=F", "PLATINUM=F", "PALLADIUM=F", "COPPER=F", "OIL=F", "RICE=F",
+        "CORN=F", "SOYBEAN=F", "WHEAT=F", "COFFEE=F", "COTTON=F", "COCOA=F", "SUGAR=F",
+        "GOLD=F", "SILVER=F", "PLATINUM=F", "PALLADIUM=F", "COPPER=F", "OIL=F", "RICE=F",
+        "CORN=F", "SOYBEAN=F", "WHEAT=F", "COFFEE=F", "COTTON=F", "COCOA=F", "SUGAR=F"
+    ]
+}
