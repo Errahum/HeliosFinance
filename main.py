@@ -1,6 +1,5 @@
 from src.utils.logger import logger
-from src.api.sqlite_financial_data_creator import FinancialDataCreator
-from src.data_management.transform_extract import TransformExtractData
+from src import FinancialDataCreator, TransformExtractData, DataProcessing
 
 import json
 
@@ -11,8 +10,12 @@ class ExecuteAnalyze:
     def __init__(self, filepath):
         self.df = filepath
         self.config = config
+        self.extract_transform='data/extract_transform'
+        self.processed='data/processed'
+
         self.financial_data_creator = FinancialDataCreator(self.config)
-        self.transform_extract = TransformExtractData(filepath, output='data/extract_transform')
+        self.transform_extract = TransformExtractData(filepath, self.extract_transform)
+        self.DataProcessing = DataProcessing(self.extract_transform, self.processed)
 
 
     def create_data(self):
@@ -25,7 +28,7 @@ class ExecuteAnalyze:
             logger.info("\nChoose an action:")
             logger.info("1. Create/Update database")
             logger.info("2. Extract/Transform database")
-
+            logger.info("3. Data Processing merge_df")
             logger.info("4. Exit")
 
             choice = input("Enter your choice: ")
@@ -34,6 +37,8 @@ class ExecuteAnalyze:
                 self.create_data()
             elif choice == '2':
                 self.transform_extract.transform_data(self.transform_extract.extract_data())
+            elif choice == '3':
+                self.DataProcessing.merge_df()
             elif choice == '4':
                 logger.info("Exiting the program.")
                 break
