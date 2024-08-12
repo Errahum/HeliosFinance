@@ -25,11 +25,11 @@ class ExecuteAnalyze:
 
     def execute_all(self):
         while True:
-            logger.info("\nChoose an action:")
-            logger.info("1. Create/Update database")
-            logger.info("2. Extract/Transform database")
-            logger.info("3. Data Processing merge_df")
-            logger.info("4. Exit")
+            print("\nChoose an action:")
+            print("1. Create/Update database")
+            print("2. Extract/Transform database")
+            print("3. Data Processing merge_df")
+            print("4. Exit")
 
             choice = input("Enter your choice: ")
 

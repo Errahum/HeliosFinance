@@ -26,6 +26,7 @@ class DataProcessing:
         
         merged_df = pd.concat(df_list, ignore_index=True)
         merged_df.to_csv(os.path.join(self.output, 'merged_df.csv'), index=False)
+        logger.info(merged_df.head())
 
     def impute_df(self, df):
         df.dropna(axis=0, how='all', inplace=True)
