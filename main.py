@@ -36,7 +36,10 @@ class ExecuteAnalyze:
             if choice == '1':
                 self.create_data()
             elif choice == '2':
-                self.transform_extract.transform_data(self.transform_extract.extract_data())
+                suffix_input = input("Enter the suffix, exemple: 1h, 1d, 1m\n").strip().lower()
+                suffixes = {'1h': '1h', '1m': '1m', '1d': '1d'}
+                if suffix_input in suffixes:
+                    self.transform_extract.transform_data(self.transform_extract.extract_data(suffix=suffixes[suffix_input]))
             elif choice == '3':
                 self.DataProcessing.merge_df()
             elif choice == '4':
