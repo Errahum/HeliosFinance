@@ -1,6 +1,5 @@
 from src.utils.logger import logger
-from src.api.sqlite_financial_data_creator import FinancialDataCreator
-from src.data_management.transform_extract import TransformExtractData
+from src import FinancialDataCreator, TransformExtractData, DataProcessing
 
 import json
 
@@ -11,8 +10,12 @@ class ExecuteAnalyze:
     def __init__(self, filepath):
         self.df = filepath
         self.config = config
+        self.extract_transform='data/extract_transform'
+        self.processed='data/processed'
+
         self.financial_data_creator = FinancialDataCreator(self.config)
-        self.transform_extract = TransformExtractData(filepath, output='data/extract_transform')
+        self.transform_extract = TransformExtractData(filepath, self.extract_transform)
+        self.DataProcessing = DataProcessing(self.extract_transform, self.processed)
 
 
     def create_data(self):
@@ -22,18 +25,23 @@ class ExecuteAnalyze:
 
     def execute_all(self):
         while True:
-            logger.info("\nChoose an action:")
-            logger.info("1. Create/Update database")
-            logger.info("2. Extract/Transform database")
-
-            logger.info("4. Exit")
+            print("\nChoose an action:")
+            print("1. Create/Update database")
+            print("2. Extract/Transform database")
+            print("3. Data Processing merge_df")
+            print("4. Exit")
 
             choice = input("Enter your choice: ")
 
             if choice == '1':
                 self.create_data()
             elif choice == '2':
-                self.transform_extract.transform_data(self.transform_extract.extract_data())
+                suffix_input = input("Enter the suffix, exemple: 1h, 1d, 1m\n").strip().lower()
+                suffixes = {'1h': '1h', '1m': '1m', '1d': '1d'}
+                if suffix_input in suffixes:
+                    self.transform_extract.transform_data(self.transform_extract.extract_data(suffix=suffixes[suffix_input]))
+            elif choice == '3':
+                self.DataProcessing.merge_df()
             elif choice == '4':
                 logger.info("Exiting the program.")
                 break

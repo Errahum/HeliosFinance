@@ -14,7 +14,7 @@ class TransformExtractData:
         tables = pd.read_sql_query(query, self.conn)
         return tables['name'].tolist()
 
-    def extract_data(self, suffix="1d"):
+    def extract_data(self, suffix):
         try:
             all_tables = self.list_tables()
             select_tables = [table for table in all_tables if table.endswith(suffix)]
