@@ -1,6 +1,6 @@
 from src.utils.logger import logger
 from src.api.sqlite_financial_data_creator import FinancialDataCreator
-from src.data_management.extraction import TransformExtractData
+from src.data_management.transform_extract import TransformExtractData
 
 import json
 
