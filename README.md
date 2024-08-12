@@ -1,30 +1,9 @@
-# Helios_financial_engineering
-My own public research about financial engineering that I share. 
-
-Don't hesitate to contribute to help each other in our research.
-
-## Currently in the app
-
-### SQL
-+ Data creator sqlite with Yahoo finance API for 1h, 1d, 1m
-+ sqlite updater
-+ Started data merging (Not useful)
-
-### Data extraction and transformation
-+ Extract Data: Extracts data from tables that have names ending with a specified suffix and stores the data in a dictionary.
-+ Transform Data: Transforms the extracted data by saving each table's data into a CSV file in the specified output directory.
-
-### Notebook
-+ data_management_analyst, data processing support
-
-### Data processing
-+ Merge DataFrames: Reads all .csv files from the input directory, adds a new column with the file name, merges them into a single DataFrame, and saves it as a new .csv file.
-+ Impute Missing Values
-+ Delete Duplicates
-+ Log Return Calculation
+# Helios financial engineering
+Public research on financial engineering that we share.
 
 ## Introduction
 Welcome to Helios financial engineering! This project is designed to help researchers and developers by providing tools for data creation, updating, and merging using the Yahoo Finance API. The project is licensed under AGPL-3.0 to promote sharing, collaboration, and innovation.
+This is a community project that is about sharing knowledge.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -34,7 +13,6 @@ Welcome to Helios financial engineering! This project is designed to help resear
 - [Resources](#resources)
 - [Contribute](#contribute)
 - [License](#license)
-- [Why AGPL-3.0?](#why-agpl-30)
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
@@ -62,6 +40,26 @@ To install the project, follow these steps:
 Follow these steps:
 1. Run main, and create your Database or use your own data.
 2. Start analyzing in the notebook folder and share it if you want!
+
+## Currently in the app
+
+### SQL
++ Data creator sqlite with Yahoo finance API for 1h, 1d, 1m
++ sqlite updater
++ Started data merging (Not useful)
+
+### Data extraction and transformation
++ Extract Data: Extracts data from tables that have names ending with a specified suffix and stores the data in a dictionary.
++ Transform Data: Transforms the extracted data by saving each table's data into a CSV file in the specified output directory.
+
+### Notebook
++ data_management_analyst, data processing support
+
+### Data processing
++ Merge DataFrames: Reads all .csv files from the input directory, adds a new column with the file name, merges them into a single DataFrame, and saves it as a new .csv file.
++ Impute Missing Values
++ Delete Duplicates
++ Log Return Calculation
 
 ## Resources
 For more information, check out the following resources:
