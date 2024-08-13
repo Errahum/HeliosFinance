@@ -1,5 +1,5 @@
 # Helios financial engineering
-Public research on financial engineering that we share.
+[![Alt text](assets/Helios-Github.svg)]()
 
 ## Introduction
 Welcome to Helios financial engineering! This project is designed to help researchers and developers by providing tools for data creation, updating, and merging using the Yahoo Finance API. The project is licensed under AGPL-3.0 to promote sharing, collaboration, and innovation.
@@ -38,6 +38,8 @@ To install the project, follow these steps:
 
 ## Usage
 Follow these steps:
+
+0. [Usage Instructions](USAGE.md)
 1. Run main, and create your Database or use your own data.
 2. Start analyzing in the notebook folder and share it if you want!
 
@@ -84,3 +86,5 @@ The AGPL-3.0 reflects our commitment to open-source principles and the responsib
 By fostering an environment where code is shared and contributions are encouraged, we hope to stimulate innovation and ongoing improvement of the project. We believe that AGPL-3.0 helps create a more open and collaborative development ecosystem.
 
 We encourage you to review the terms of the AGPL-3.0 license and contribute to the project while adhering to these principles.
+
+[![Alt text](assets/Helios-Logo.svg)]()
