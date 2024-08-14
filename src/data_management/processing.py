@@ -28,13 +28,6 @@ class DataProcessing:
         merged_df.to_csv(os.path.join(self.output, 'merged_df.csv'), index=False)
         logger.info(merged_df.head())
 
-    def impute_df(self, df):
-        df.dropna(axis=0, how='all', inplace=True)
-        df.fillna(method='ffill', inplace=True)
-        df.fillna(method='bfill', inplace=True)
-
-    def delete_duplicates(self, df):
-        df.drop_duplicates(axis=0, how='all', inplace=True)
 
     def log_return_df(self, df):
         # take the df from merge_df that is clean and replace the values with the log return
