@@ -54,10 +54,13 @@ class FinancialDataCreator:
             if not table_exists.empty:
                 existing_data = pd.read_sql(f'SELECT * FROM "{table_name}"', self.connect_sql, index_col=self.date_name)
                 existing_data.index = existing_data.index.astype(str)
+                data.index = data.index.astype(str)
                 data = data.combine_first(existing_data)
 
             if not data.empty:
                 data.index = data.index.astype(str)
+                data = data[~data.index.duplicated(keep='last')]
+                data.drop_duplicates(inplace=True, keep='last')
                 data.to_sql(table_name, self.connect_sql, if_exists='replace', index=True)
             else:
                 logger.info(f"No data for {symbol} at interval {self.interval}, skip...")
@@ -90,7 +93,6 @@ class FinancialDataCreator:
         # save
         merged_df.to_sql(f'merged_data_{interval}', self.connect_sql, if_exists='replace', index=True)
         logger.info(f"Table 'merged_data_{interval}' created/updated.")
-
 
     def update_database(self, interval, merge_bool):
         self.download_data(interval)

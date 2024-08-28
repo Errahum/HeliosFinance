@@ -9,7 +9,11 @@ def impute_df(df):
 
 def delete_duplicates(df):
     df.drop_duplicates(inplace=True)
+    df[~df.index.duplicated(keep='first')]
     return df
 
 def log_return_df(df):
     return np.log(df).diff()
+
+def drop_negative_values(df):
+    return df[df['Close'] >= 0]
